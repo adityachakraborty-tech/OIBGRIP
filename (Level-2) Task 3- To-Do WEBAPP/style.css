@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .12rem;
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: darkgrey;
+    background-image: url('bg2.webp');
+}
+
+::selection {
+    background-color: #363636;
+    color: #fff;
+}
+
+.container {
+    width: 766px;
+    height: 625px;
+    position: absolute;
+    top: 55%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+
+}
+
+.todo-list {
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+
+}
+
+.head {
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 56px;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+    text-align: center;
+    margin-top: 75px;
+    margin-left: 50px;
+
+}
+
+.input-list {
+    width: 100%;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: azure;
+    border-radius: 7px;
+    padding: 0 80px 0px 10px;
+    outline: none;
+}
+
+.add-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.list-box {
+    width: 100%;
+    height: 500px;
+    /* background-color: azure; */
+    margin-top: 40px;
+    margin-bottom: 30px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #363636cc antiquewhite;
+}
+
+.list {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.list :hover {
+    background-color: azure;
+}
+
+.list p {
+    width: 100%;
+    line-height: 40px;
+    padding: 0 60px 0 10px;
+
+}
+
+.text-hidden {
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.icons {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+
+.icons i {
+    margin-right: 10px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.icons i:first-child:hover {
+    color: rgb(73, 407, 73);
+}
+
+.icons i:last-child:hover {
+    color: tomato;
+}
+
+.clear-list {
+    display: none;
+    position: absolute;
+    bottom: -52px;
+    color: tomato;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.clear-list:hover {
+    font-weight: 600;
+}
+
+.checked {
+    color: #363636cc;
+    text-decoration: line-through;
+}
+
+.list-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list-box::-webkit-scrollbar-track {
+    background-color: antiquewhite;
+}
+
+.list-box::-webkit-scrollbar-thumb {
+    background-color: #363636cc;
+}
